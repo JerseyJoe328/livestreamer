@@ -16,6 +16,7 @@ afreeca             afreecatv.com        Yes   No
 afreecatv           afreeca.tv           Yes   No
 aftonbladet         aftonbladet.se       Yes   Yes
 alieztv             aliez.tv             Yes   Yes
+antenna             antenna.gr           --    Yes
 ard_live            live.daserste.de     Yes   --    Streams may be geo-restricted to Germany.
 ard_mediathek       ardmediathek.de      Yes   Yes   Streams may be geo-restricted to Germany.
 artetv              arte.tv              Yes   Yes
@@ -49,7 +50,7 @@ letontv             leton.tv             Yes   --
 livestation         livestation.com      Yes   --
 livestream          new.livestream.com   Yes   --
 livecoding          livecoding.tv        Yes   --
-media_ccc_de        - media.ccc.de       Yes   Yes   Only mp4 and HLS ar are supported.
+media_ccc_de        - media.ccc.de       Yes   Yes   Only mp4 and HLS are supported.
                     - streaming... [4]_
 meerkat             meerkatapp.co        Yes   --
 mips                mips.tv              Yes   --    Requires rtmpdump with K-S-V patches.
