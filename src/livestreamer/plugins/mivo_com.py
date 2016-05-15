@@ -1,6 +1,6 @@
 import re
 
-from livestreamer.plugin import Plugin, PluginOptions
+from livestreamer.plugin import Plugin, PluginError, PluginOptions
 from livestreamer.plugin.api import http, validate
 from livestreamer.stream import HLSStream
 
@@ -63,7 +63,7 @@ class MivoCom(Plugin):
                 token = http.json(res, schema=_login_schema)
                 self.logger.info("Successfully logged in as {0}", email)
             else:
-                self.logger.error("Unable to authenticate")
+                raise PluginError("Unable to authenticate")
 
         return token
 
