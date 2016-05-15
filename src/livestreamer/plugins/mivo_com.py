@@ -61,6 +61,9 @@ class MivoCom(Plugin):
             res = http.post(LOGIN_URL, data=data, acceptable_status=(201, 401))
             if res.status_code == 201:
                 token = http.json(res, schema=_login_schema)
+                self.logger.info("Successfully logged in as {0}", email)
+            else:
+                self.logger.error("Unable to authenticate")
 
         return token
 
@@ -81,6 +84,7 @@ class MivoCom(Plugin):
                 auth = http.json(res, schema=_auth_schema)
                 sign = auth["sign"]
             else:
+                self.logger.warning("Unable to get token")
                 sign = "?video"
 
             res = http.get(CHANNELS_URL)
