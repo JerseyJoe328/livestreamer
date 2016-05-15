@@ -804,6 +804,14 @@ def setup_plugin_options():
         livestreamer.set_plugin_option("livestation", "password",
                                        args.livestation_password)
 
+    if args.mivocom_email:
+        livestreamer.set_plugin_option("mivo_com", "email",
+                                       args.mivocom_email)
+
+    if args.mivocom_password:
+        livestreamer.set_plugin_option("mivo_com", "password",
+                                       args.mivocom_password)
+
     # Deprecated options
     if args.jtv_legacy_names:
         console.logger.warning("The option --jtv/twitch-legacy-names is "

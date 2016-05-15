@@ -962,6 +962,20 @@ plugin.add_argument(
     A Livestation account password to use with --livestation-email.
     """
 )
+plugin.add_argument(
+    "--mivocom-email",
+    metavar="EMAIL",
+    help="""
+    A Mivo account email to access restricted streams.
+    """
+)
+plugin.add_argument(
+    "--mivocom-password",
+    metavar="PASSWORD",
+    help="""
+    A Mivo account password to use with --mivocom-email.
+    """
+)
 
 
 # Deprecated options
