@@ -1,0 +1,1213 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Changelog &mdash; Livestreamer 1.12.2 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+    <link rel="top" title="Livestreamer 1.12.2 documentation" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document" data-spy="scroll" data-target=".wy-menu-vertical > ul > li.current > ul">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> Livestreamer</a>
+        
+        <div class="tablet-hide">
+          <small>Command-line utility that extracts streams from various services and pipes them into a video player of choice.</small>
+          <hr />
+        </div>
+        
+
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#linux-and-bsd-packages">Linux and BSD packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#other-platforms">Other platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#source-code">Source code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#windows-binaries">Windows binaries</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-Line Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#tutorial">Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#configuration-file">Configuration file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#plugin-specific-configuration-file">Plugin specific configuration file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#plugin-specific-usage">Plugin specific usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#sideloading-plugins">Sideloading plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#playing-built-in-streaming-protocols-directly">Playing built-in streaming protocols directly</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli.html#command-line-usage">Command-line usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plugin_matrix.html">Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="players.html">Players</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="players.html#transport-modes">Transport modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="players.html#player-compatibility">Player compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="players.html#known-issues-and-workarounds">Known issues and workarounds</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="issues.html">Common issues</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="issues.html#streams-are-buffering-lagging">Streams are buffering/lagging</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api_guide.html">API Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_guide.html#extracting-streams">Extracting streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_guide.html#opening-streams-to-read-data">Opening streams to read data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_guide.html#inspecting-streams">Inspecting streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_guide.html#session-object">Session object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_guide.html#examples">Examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api.html#livestreamer">Livestreamer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#session">Session</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#module-livestreamer.plugin">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#streams">Streams</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html#exceptions">Exceptions</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+
+
+      
+      <div class="tablet-hide">
+        <hr />
+		<p class="wy-text-center">
+	        <a href="https://github.com/chrippa/livestreamer"
+			   class="github-button" data-icon="octicon-mark-github"
+		       data-count-href="/chrippa/livestreamer/stargazers"
+			   data-count-api="/repos/chrippa/livestreamer#stargazers_count">Github</a>
+	        <a href="https://github.com/chrippa/livestreamer/issues"
+			   class="github-button" data-icon="octicon-issue-opened">Issues</a>
+
+        </p>
+      </div>
+      
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Livestreamer</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Changelog</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="changelog">
+<span id="id1"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-1-12-2-2015-05-02">
+<h2>Version 1.12.2 (2015-05-02)<a class="headerlink" href="#version-1-12-2-2015-05-02" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>hds: Don&#8217;t modify request params when handling PVSWF. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/842">#842</a>)</li>
+<li>hls: Handle unpadded encryption IV&#8217;s.</li>
+<li>Fixed regression in redirect resolver. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/816">#816</a>)</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for media.ccc.de (media_ccc_de), patch by <a class="reference external" href="https://github.com/meise">&#64;meise</a>.</li>
+<li>Added plugin for Kanal 5/9/11 (sbsdiscovery), patch by <a class="reference external" href="https://github.com/tboss">&#64;tboss</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/815">#815</a>)</li>
+<li>Added plugin for Periscope (periscope).</li>
+<li>Added plugin for SSH101 (ssh101), patch by <a class="reference external" href="https://github.com/Razier">&#64;Razier</a>-23. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/869">#869</a>)</li>
+<li>artetv: Updated for service changes.</li>
+<li>crunchyroll: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/864">#864</a>, <a class="reference external" href="https://github.com/chrippa/livestreamer/issues/865">#865</a>)</li>
+<li>hitbox: Fixed VOD support. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/856">#856</a>)</li>
+<li>livestream: Updated for service changes.</li>
+<li>viasat: Added support for juicyplay.se.</li>
+<li>viasat: Fixed missing streams. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/822">#822</a>)</li>
+<li>youtube: Added support for /channel URLs. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/825">#825</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-12-1-2015-03-22">
+<h2>Version 1.12.1 (2015-03-22)<a class="headerlink" href="#version-1-12-1-2015-03-22" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Don&#8217;t crash when failing to look up listening ports. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/790">#790</a>)</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for ITV Player, patch by <a class="reference external" href="https://github.com/blxd">&#64;blxd</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/776">#776</a>)</li>
+<li>Added plugin for tv3.cat, patch by <a class="reference external" href="https://github.com/blxd">&#64;blxd</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/784">#784</a>)</li>
+<li>Added plugin for TV Catchup, patch by <a class="reference external" href="https://github.com/blxd">&#64;blxd</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/775">#775</a>)</li>
+<li>connectcast: Fixed crash, patch by <a class="reference external" href="https://github.com/mammothb">&#64;mammothb</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/779">#779</a>)</li>
+<li>dailymotion: Added support for HDS VODs. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/731">#731</a>)</li>
+<li>gaminglive: Added support for VODs, patches by <a class="reference external" href="https://github.com/kasper93">&#64;kasper93</a> and <a class="reference external" href="https://github.com/chhe">&#64;chhe</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/789">#789</a>, <a class="reference external" href="https://github.com/chrippa/livestreamer/issues/808">#808</a>)</li>
+<li>picarto: Updated for service changes, patch by <a class="reference external" href="https://github.com/FireDart">&#64;FireDart</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/803">#803</a>)</li>
+<li>tv4play: Work around bad SSL implementation on Python 2. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/785">#785</a>)</li>
+<li>twitch: Use correct OAuth scopes, patch by <a class="reference external" href="https://github.com/josephglanville">&#64;josephglanville</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/778">#778</a>)</li>
+<li>ustreamtv: Updated for service changes, patch by <a class="reference external" href="https://github.com/trUSTssc">&#64;trUSTssc</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/799">#799</a>)</li>
+<li>viasat: Fixed missing streams. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/750">#750</a>)</li>
+<li>viasat: Added play.tv3.lt to supported URLs. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/773">#773</a>)</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>hds: Fixed issue with query parameters when building fragment URLs. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/786">#786</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-12-0-2015-03-01">
+<h2>Version 1.12.0 (2015-03-01)<a class="headerlink" href="#version-1-12-0-2015-03-01" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Made HTTP modes more strict to avoid issues with <cite>mpv &#8211;yt-dl</cite>.</li>
+<li>Fixed <a class="reference internal" href="cli.html#cmdoption--http-cookie"><code class="xref std std-option docutils literal"><span class="pre">--http-cookie</span></code></a> option crash.</li>
+</ul>
+</dd>
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added <a class="reference internal" href="cli.html#cmdoption--can-handle-url"><code class="xref std std-option docutils literal"><span class="pre">--can-handle-url</span></code></a> option, useful for scripting.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--version-check"><code class="xref std std-option docutils literal"><span class="pre">--version-check</span></code></a> option to force a version check.</li>
+<li>Added a passive HTTP server mode (<a class="reference internal" href="cli.html#cmdoption--player-external-http"><code class="xref std std-option docutils literal"><span class="pre">--player-external-http</span></code></a>), patch by <a class="reference external" href="https://github.com/danielkza">&#64;danielkza</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/699">#699</a>)</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for Disney Channel Germany, patch by <a class="reference external" href="https://github.com/boekkooi">&#64;boekkooi</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/698">#698</a>)</li>
+<li>Added plugin for NOS (Nederlandse Omroep Stichting), patch by <a class="reference external" href="https://github.com/boekkooi">&#64;boekkooi</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/697">#697</a>)</li>
+<li>Added plugin for tga.plu.cn, patch by <a class="reference external" href="https://github.com/wolftankk">&#64;wolftankk</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/669">#669</a>)</li>
+<li>Added plugin for Wat.tv, patch by <a class="reference external" href="https://github.com/boekkooi">&#64;boekkooi</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/701">#701</a>)</li>
+<li>Added plugin for afreeca.tv. (The old afreecatv plugin has been renamed to afreeca)</li>
+<li>chaturbate: Added support for subdomain URLs, patch by <a class="reference external" href="https://github.com/GameWalker">&#64;GameWalker</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/676">#676</a>)</li>
+<li>connectcast: Updated for service changes, patch by <a class="reference external" href="https://github.com/darvelo">&#64;darvelo</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/722">#722</a>)</li>
+<li>dailymotion: Added support for games.dailymotion.com, patch by <a class="reference external" href="https://github.com/daslicious">&#64;daslicious</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/684">#684</a>)</li>
+<li>dommune: Fixed Youtube redirect URL.</li>
+<li>gaminglive: Updated for service changes, patch by <a class="reference external" href="https://github.com/chhe">&#64;chhe</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/721">#721</a>)</li>
+<li>mlgtv: Updated for service changes, patch by <a class="reference external" href="https://github.com/daslicious">&#64;daslicious</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/686">#686</a>)</li>
+<li>hitbox: Updated for services changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/648">#648</a>)</li>
+<li>streamlive: Updated for service changes, patch by <a class="reference external" href="https://github.com/daslicious">&#64;daslicious</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/667">#667</a>)</li>
+<li>ustreamtv: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/707">#707</a>)</li>
+<li>youtube: Now handles more URL types.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-11-1-2014-12-12">
+<h2>Version 1.11.1 (2014-12-12)<a class="headerlink" href="#version-1-11-1-2014-12-12" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>twitch: Updated for API changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/633">#633</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-11-0-2014-12-10">
+<h2>Version 1.11.0 (2014-12-10)<a class="headerlink" href="#version-1-11-0-2014-12-10" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bugfixes:</dt>
+<dd><ul class="first last simple">
+<li>cli: Only apply the backslash magic on player paths on Windows.</li>
+</ul>
+</dd>
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added <a class="reference internal" href="cli.html#cmdoption--http-cookie"><code class="xref std std-option docutils literal"><span class="pre">--http-cookie</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--http-header"><code class="xref std std-option docutils literal"><span class="pre">--http-header</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--http-query-param"><code class="xref std std-option docutils literal"><span class="pre">--http-query-param</span></code></a> option.</li>
+<li>Deprecated the <code class="xref std std-option docutils literal"><span class="pre">--http-cookies</span></code> option.</li>
+<li>Deprecated the <code class="xref std std-option docutils literal"><span class="pre">--http-headers</span></code> option.</li>
+<li>Deprecated the <code class="xref std std-option docutils literal"><span class="pre">--http-query-params</span></code> option.</li>
+<li>Changed the continuous HTTP mode to always fetch streams.
+Should fix segmented streams repeating at the end for most
+services.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for NPO, patch by <a class="reference external" href="https://github.com/monkeyphysics">&#64;monkeyphysics</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/599">#599</a>)</li>
+<li>afreecatv: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/568">#568</a>)</li>
+<li>beattv: Updated validation schema to include float offsets, patch by <a class="reference external" href="https://github.com/suhailpatel">&#64;suhailpatel</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/555">#555</a>)</li>
+<li>douyutv: Added support for transcodes.</li>
+<li>gaminglive: Fixed quality names, patch by <a class="reference external" href="https://github.com/chhe">&#64;chhe</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/545">#545</a>)</li>
+<li>goodgame: Updated for service changes, patch by <a class="reference external" href="https://github.com/JaxxC">&#64;JaxxC</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/554">#554</a>)</li>
+<li>oldlivestream: Check that streams don&#8217;t return 404. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/560">#560</a>)</li>
+<li>ilive: Updated for service changes and renamed to streamlive. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/563">#563</a>)</li>
+<li>livestation: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/581">#581</a>)</li>
+<li>twitch: Added support for the new video streams.</li>
+<li>vaughnlive: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/611">#611</a>)</li>
+<li>veetle: Fixed shortcut URLs, patch by <a class="reference external" href="https://github.com/monkeyphysics">&#64;monkeyphysics</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/601">#601</a>)</li>
+<li>viasat/viagame: Updated for service changes (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/564">#564</a>, <a class="reference external" href="https://github.com/chrippa/livestreamer/issues/566">#566</a>, <a class="reference external" href="https://github.com/chrippa/livestreamer/issues/617">#617</a>)</li>
+</ul>
+</dd>
+<dt>Plugin API:</dt>
+<dd><ul class="first last simple">
+<li>Added a class to simplify mapping data to stream objects.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-10-2-2014-09-05">
+<h2>Version 1.10.2 (2014-09-05)<a class="headerlink" href="#version-1-10-2-2014-09-05" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for Arte.tv (artetv). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/457">#457</a>)</li>
+<li>Added plugin for RTVE.es (rtve), patch by <a class="reference external" href="https://github.com/jaimeMF">&#64;jaimeMF</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/509">#509</a>)</li>
+<li>Added plugin for Seemeplay.ru (seemeplay). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/510">#510</a>)</li>
+<li>euronews: Updated for service changes.</li>
+<li>filmon: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/514">#514</a>)</li>
+<li>gaminglive: Updated for service changes, patch by <a class="reference external" href="https://github.com/chhe">&#64;chhe</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/524">#524</a>)</li>
+<li>twitch: Now handles videos with chunks that are missing URLs.</li>
+<li>vaughnlive: Added support for breakers.tv, instagib.tv and vapers.tv. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/521">#521</a>)</li>
+<li>youtube: Added support for audio-only streams. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/522">#522</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-10-1-2014-08-22">
+<h2>Version 1.10.1 (2014-08-22)<a class="headerlink" href="#version-1-10-1-2014-08-22" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed strange read error caused by double buffering in FLV playlists.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for Vaughn Live (vaughnlive). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/478">#478</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-10-0-2014-08-18">
+<h2>Version 1.10.0 (2014-08-18)<a class="headerlink" href="#version-1-10-0-2014-08-18" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>The HDS options added in 1.8.0 where never actually applied when
+used via the CLI, oops.</li>
+<li>Fixed default player paths not expanding ~, patch by <a class="reference external" href="https://github.com/medina">&#64;medina</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/484">#484</a>)</li>
+</ul>
+</dd>
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added <a class="reference internal" href="cli.html#cmdoption--hds-segment-threads"><code class="xref std std-option docutils literal"><span class="pre">--hds-segment-threads</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--hls-segment-threads"><code class="xref std std-option docutils literal"><span class="pre">--hls-segment-threads</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--stream-segment-attempts"><code class="xref std std-option docutils literal"><span class="pre">--stream-segment-attempts</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--stream-segment-threads"><code class="xref std std-option docutils literal"><span class="pre">--stream-segment-threads</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--stream-segment-timeout"><code class="xref std std-option docutils literal"><span class="pre">--stream-segment-timeout</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--stream-timeout"><code class="xref std std-option docutils literal"><span class="pre">--stream-timeout</span></code></a> option.</li>
+<li>Deprecated the <code class="xref std std-option docutils literal"><span class="pre">--jtv-cookie</span></code> option.</li>
+<li>Deprecated the <code class="xref std std-option docutils literal"><span class="pre">--jtv-password</span></code> option.</li>
+<li>Significantly improved the status line printed while writing a
+stream to a file. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/462">#462</a>)</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for goodgame.ru (goodgame), patch by <a class="reference external" href="https://github.com/eltiren">&#64;eltiren</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/466">#466</a>)</li>
+<li>Added plugin for gaminglive.tv (gaminglive), patch by <a class="reference external" href="https://github.com/chhe">&#64;chhe</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/468">#468</a>)</li>
+<li>Added plugin for douyutv.com (douyutv), patch by <a class="reference external" href="https://github.com/nixxquality">&#64;nixxquality</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/469">#469</a>)</li>
+<li>Added plugin for NHK World (nhkworld).</li>
+<li>Added plugin for Let On TV (letontv), patch by <a class="reference external" href="https://github.com/cheah">&#64;cheah</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/500">#500</a>)</li>
+<li>Removed plugin: justintv.</li>
+<li>afreecatv: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/488">#488</a>)</li>
+<li>hitbox: Added support for HLS videos.</li>
+<li>twitch: Fixed some Twitch broadcasts being unplayable. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/490">#490</a>)</li>
+<li>ustreamtv: Fixed regression that caused channels using RTMP streams to fail.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>akamaihd: Now supports background buffering.</li>
+<li>http: Now supports background buffering.</li>
+</ul>
+</dd>
+<dt>API:</dt>
+<dd><ul class="first last simple">
+<li>Added new session option: <code class="docutils literal"><span class="pre">hds-segment-threads</span></code>.</li>
+<li>Added new session option: <code class="docutils literal"><span class="pre">hls-segment-threads</span></code>.</li>
+<li>Added new session option: <code class="docutils literal"><span class="pre">stream-segment-attempts</span></code>.</li>
+<li>Added new session option: <code class="docutils literal"><span class="pre">stream-segment-threads</span></code>.</li>
+<li>Added new session option: <code class="docutils literal"><span class="pre">stream-segment-timeout</span></code>.</li>
+<li>Added new session option: <code class="docutils literal"><span class="pre">stream-timeout</span></code>.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-9-0-2014-07-22">
+<h2>Version 1.9.0 (2014-07-22)<a class="headerlink" href="#version-1-9-0-2014-07-22" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>General:</dt>
+<dd><ul class="first last simple">
+<li><strong>Dropped support for Python 3.2.</strong> This is due to missing features
+which are necessary for this projects progression.</li>
+<li><a class="reference external" href="https://pypi.python.org/pypi/singledispatch">singledispatch</a> is now a
+dependency on Python &lt;3.4.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Handle bad input data better in parse_json/xml. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/440">#440</a>)</li>
+<li>Handle bad input data in config files. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/432">#432</a>)</li>
+<li>Fixed regression causing rtmpdump proxies to have no effect.</li>
+</ul>
+</dd>
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Improved <a class="reference internal" href="cli.html#cmdoption--help"><code class="xref std std-option docutils literal"><span class="pre">--help</span></code></a> significantly, more readable and more content.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--config"><code class="xref std std-option docutils literal"><span class="pre">--config</span></code></a> option.</li>
+<li>Added <a class="reference internal" href="cli.html#cmdoption--stream-url"><code class="xref std std-option docutils literal"><span class="pre">--stream-url</span></code></a> option. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/281">#281</a>)</li>
+<li>Added support for K and M suffixes to the <a class="reference internal" href="cli.html#cmdoption--ringbuffer-size"><code class="xref std std-option docutils literal"><span class="pre">--ringbuffer-size</span></code></a> option.</li>
+<li>Added support for loading config files based on plugin.</li>
+<li>Added ~/Applications to the search path for VLC on Mac OS X, patch by <a class="reference external" href="https://github.com/maxnordlund">&#64;maxnordlund</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/454">#454</a>)</li>
+<li>Deprecated <code class="xref std std-option docutils literal"><span class="pre">--best-stream-default</span></code> and added <a class="reference internal" href="cli.html#cmdoption--default-stream"><code class="xref std std-option docutils literal"><span class="pre">--default-stream</span></code></a>
+as a more flexible replacement. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/381">#381</a>)</li>
+<li>Will now only warn about newer versions available every 6 hours.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Many plugins have been refactored to use the validation API and better coding standards.</li>
+<li>Added plugin for Aftonbladet (aftonbladet).</li>
+<li>Added plugin for ARD Live (ard_live), patch by <a class="reference external" href="https://github.com/MasterofJOKers">&#64;MasterofJOKers</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/419">#419</a>)</li>
+<li>Added plugin for ARD Mediathek (ard_mediathek), patch by <a class="reference external" href="https://github.com/yeeeargh">&#64;yeeeargh</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/421">#421</a>)</li>
+<li>Added plugin for Connect Cast (connectcast). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/423">#423</a>)</li>
+<li>Added plugin for Danmarks Radio (drdk).</li>
+<li>Added plugin for DOMMUNE (dommune).</li>
+<li>Added plugin for TV4 Play (tv4play).</li>
+<li>Added plugin for VGTV (vgtv), patch by <a class="reference external" href="https://github.com/jantore">&#64;jantore</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/435">#435</a>)</li>
+<li>Removed plugin: cast3d</li>
+<li>Removed plugin: freedocast</li>
+<li>Removed plugin: hashd</li>
+<li>Removed plugin: ongamenet</li>
+<li>afreecatv: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/412">#412</a>, <a class="reference external" href="https://github.com/chrippa/livestreamer/issues/413">#413</a>)</li>
+<li>dailymotion: Added support for source streams, patch by <a class="reference external" href="https://github.com/kasper93">&#64;kasper93</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/428">#428</a>)</li>
+<li>euronews: Added support for videos.</li>
+<li>nrk: Added support for radio.nrk.no, patch by <a class="reference external" href="https://github.com/jantore">&#64;jantore</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/433">#433</a>)</li>
+<li>picarto: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/431">#431</a>)</li>
+<li>twitch: Added support for audio only streams, patch by <a class="reference external" href="https://github.com/CommanderRoot">&#64;CommanderRoot</a>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/411">#411</a>)</li>
+<li>viasat: Added support for HDS streams.</li>
+<li>viasat: Added support for viagame.com.</li>
+</ul>
+</dd>
+<dt>API:</dt>
+<dd><ul class="first last simple">
+<li>Added <code class="xref py py-func docutils literal"><span class="pre">Livestreamer.streams()</span></code> method.</li>
+<li>Added <a class="reference internal" href="api.html#livestreamer.streams" title="livestreamer.streams"><code class="xref py py-func docutils literal"><span class="pre">livestreamer.streams()</span></code></a> function.</li>
+<li>Renamed <code class="xref py py-func docutils literal"><span class="pre">Plugin.get_streams()</span></code> to <code class="xref py py-func docutils literal"><span class="pre">Plugin.streams()</span></code>.</li>
+</ul>
+</dd>
+<dt>Plugin API:</dt>
+<dd><ul class="first last simple">
+<li>Added a validation API to make validating data easier and safer.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-8-2-2014-05-30">
+<h2>Version 1.8.2 (2014-05-30)<a class="headerlink" href="#version-1-8-2-2014-05-30" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed regression in loading config from non-ascii paths on Python 2.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>azubutv: Update for service changes, patch by Gapato. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/399">#399</a>)</li>
+<li>dailymotion: Added support for VODs, patch by Gapato. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/402">#402</a>)</li>
+<li>hitbox: Fixed a issue where the correct streaming server was not used.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>hls: Handle playlists that redirect. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/405">#405</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-8-1-2014-05-18">
+<h2>Version 1.8.1 (2014-05-18)<a class="headerlink" href="#version-1-8-1-2014-05-18" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>General:</dt>
+<dd><ul class="first last simple">
+<li>Added a wheel package to PyPi for speedier installation via pip.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>hls: Handle encrypted segments that are invalid length (not multiple by 16). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/365">#365</a>)</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for Furstream, patch by Pascal Romahn. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/360">#360</a>)</li>
+<li>Added plugin for Viasat&#8217;s play sites (tv6play.se, etc). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/378">#378</a>)</li>
+<li>Added plugin for ZDFmediathek, patch by Pascal Romahn. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/360">#360</a>)</li>
+<li>azubutv: Updated for service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/373">#373</a>)</li>
+<li>crunchyroll: Correctly handle unicode errors, patch by Agustin Carrasco. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/387">#387</a>, <a class="reference external" href="https://github.com/chrippa/livestreamer/issues/388">#388</a>)</li>
+<li>filmon: Updated for service changes, patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/375">#375</a>)</li>
+<li>hitbox: Updated for service changes.</li>
+<li>ilive: Updated for service changes, patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/376">#376</a>)</li>
+<li>svtplay: Added support for SVT Flow.</li>
+<li>twitch: Now uses the beta API on beta.twitch.tv URLs. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/391">#391</a>)</li>
+<li>ustream: Correctly handle UHS streams containing only video or audio.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-8-0-2014-04-21">
+<h2>Version 1.8.0 (2014-04-21)<a class="headerlink" href="#version-1-8-0-2014-04-21" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added option: <code class="docutils literal"><span class="pre">--no-version-check</span></code></li>
+<li>Added HTTP options: <code class="docutils literal"><span class="pre">--http-cookies</span></code>,
+<code class="docutils literal"><span class="pre">--http-headers</span></code>,
+<code class="docutils literal"><span class="pre">--http-query-params</span></code>,
+<code class="docutils literal"><span class="pre">--http-ignore-env</span></code>,
+<code class="docutils literal"><span class="pre">--http-no-ssl-verify</span></code>,
+<code class="docutils literal"><span class="pre">--http-ssl-cert</span></code>,
+<code class="docutils literal"><span class="pre">--http-ssl-cert-crt-key</span></code> and
+<code class="docutils literal"><span class="pre">--http-timeout</span></code></li>
+<li>Added HTTP stream option: <code class="docutils literal"><span class="pre">--http-stream-timeout</span></code></li>
+<li>Added HDS stream options: <code class="docutils literal"><span class="pre">--hds-segment-attempts</span></code>,
+<code class="docutils literal"><span class="pre">--hds-segment-timeout</span></code>
+<code class="docutils literal"><span class="pre">--hds-timeout</span></code></li>
+<li>Added HLS stream options: <code class="docutils literal"><span class="pre">--hls-live-edge</span></code>,
+<code class="docutils literal"><span class="pre">--hls-segment-attempts</span></code>,
+<code class="docutils literal"><span class="pre">--hls-segment-timeout</span></code> and
+<code class="docutils literal"><span class="pre">--hls-timeout</span></code></li>
+<li>Added RTMP stream option: <code class="docutils literal"><span class="pre">--rtmp-timeout</span></code></li>
+<li>Added plugin options: <code class="docutils literal"><span class="pre">--livestation-email</span></code> and <code class="docutils literal"><span class="pre">--livestation-password</span></code></li>
+<li>Added stream options: <code class="docutils literal"><span class="pre">--retry-streams</span></code>,
+<code class="docutils literal"><span class="pre">--retry-open</span></code> and
+<code class="docutils literal"><span class="pre">--best-stream-default</span></code></li>
+<li>Deprecated option: <code class="docutils literal"><span class="pre">--hds-fragment-buffer</span></code></li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for Bambuser, patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/327">#327</a>)</li>
+<li>Added plugin for Be-at.tv, patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/342">#342</a>)</li>
+<li>Added plugin for Chaturbate, patch by papplampe. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/337">#337</a>)</li>
+<li>Added plugin for Cybergame.tv, patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/324">#324</a>)</li>
+<li>Added plugin for Picarto, patch by papplampe. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/352">#352</a>)</li>
+<li>Added plugin for SpeedRunsLive, patch by Stefan Breunig. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/335">#335</a>)</li>
+<li>Removed plugins for dead services: Owncast.me and YYCast.</li>
+<li>azubutv: Added support for beta.azubu.tv.</li>
+<li>crunchyroll: Added workaround for SSL verification issue.</li>
+<li>dailymotion: Added support for HDS streams. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/348">#348</a>)</li>
+<li>gomexp: Fixed encoding issue on Python 2.</li>
+<li>livestation: Added support for logging in, patch by Sunaga Takahiro. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/344">#344</a>)</li>
+<li>mlgtv: Removed the <code class="docutils literal"><span class="pre">mobile_</span></code> prefix from the HLS streams.</li>
+<li>twitch: Added workaround for SSL verification issue. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/255">#255</a>)</li>
+<li>ustreamtv: Improved UHS stream stability.</li>
+<li>ustreamtv: Added support for RTMP VODs.</li>
+<li>youtube: Updated for service changes.</li>
+<li>youtube: Added support for embed URLs, patch by Athanasios Oikonomou.</li>
+<li>youtube: Now only picks up live streams from channel pages.</li>
+</ul>
+</dd>
+<dt>General:</dt>
+<dd><ul class="first last simple">
+<li>Now attempts to resolve URL redirects such as URL shorterners.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Added workaround for HTTP streams not applying read timeout on some requests versions.</li>
+</ul>
+</dd>
+<dt>API:</dt>
+<dd><ul class="first last simple">
+<li>Added new options: <code class="docutils literal"><span class="pre">hds-segment-attempts</span></code>,
+<code class="docutils literal"><span class="pre">hds-segment-timeout</span></code>,
+<code class="docutils literal"><span class="pre">hds-timeout</span></code>,
+<code class="docutils literal"><span class="pre">hls-live-edge</span></code>,
+<code class="docutils literal"><span class="pre">hls-segment-attempts</span></code>,
+<code class="docutils literal"><span class="pre">hls-segment-timeout</span></code>,
+<code class="docutils literal"><span class="pre">hls-timeout</span></code>,
+<code class="docutils literal"><span class="pre">http-proxy</span></code>,
+<code class="docutils literal"><span class="pre">https-proxy</span></code>,
+<code class="docutils literal"><span class="pre">http-cookies</span></code>,
+<code class="docutils literal"><span class="pre">http-headers</span></code>,
+<code class="docutils literal"><span class="pre">http-query-params</span></code>,
+<code class="docutils literal"><span class="pre">http-trust-env</span></code>,
+<code class="docutils literal"><span class="pre">http-ssl-verify</span></code>,
+<code class="docutils literal"><span class="pre">http-ssl-cert</span></code>,
+<code class="docutils literal"><span class="pre">http-timeout</span></code>,
+<code class="docutils literal"><span class="pre">http-stream-timeout</span></code> and
+<code class="docutils literal"><span class="pre">rtmp-timeout</span></code></li>
+<li>Renamed option <code class="docutils literal"><span class="pre">errorlog</span></code> to <code class="docutils literal"><span class="pre">subprocess-errorlog</span></code>.</li>
+<li>Renamed option <code class="docutils literal"><span class="pre">rtmpdump-proxy</span></code> to <code class="docutils literal"><span class="pre">rtmp-proxy</span></code>.</li>
+<li>Renamed option <code class="docutils literal"><span class="pre">rtmpdump</span></code> to <code class="docutils literal"><span class="pre">rtmp-rtmpdump</span></code>.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-7-5-2014-03-07">
+<h2>Version 1.7.5 (2014-03-07)<a class="headerlink" href="#version-1-7-5-2014-03-07" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>filmon: Added VOD support, patch by Athanasios Oikonomou.</li>
+<li>ilive: Added support for HLS streams, patch by Athanasios Oikonomou.</li>
+<li>mlgtv: Updated for service changes.</li>
+<li>veetle: Now handles shortened URLs, patch by Athanasios Oikonomou.</li>
+<li>youtube: Updated for service changes.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed gzip not getting decoded in streams.</li>
+</ul>
+</dd>
+<dt>Other:</dt>
+<dd><ul class="first last simple">
+<li>Added scripts to automatically create Windows builds via Travis CI.
+Builds are available here: <a class="reference external" href="http://livestreamer-builds.s3.amazonaws.com/builds.html">http://livestreamer-builds.s3.amazonaws.com/builds.html</a></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-7-4-2014-02-28">
+<h2>Version 1.7.4 (2014-02-28)<a class="headerlink" href="#version-1-7-4-2014-02-28" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for MLG.tv. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/275">#275</a>)</li>
+<li>Added plugin for DMCloud, patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/297">#297</a>)</li>
+<li>Added plugin for NRK TV, patch by Jon Bergli Heier. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/309">#309</a>)</li>
+<li>Added plugin for GOMeXP.com.</li>
+<li>Removed GOMTV.net plugin as the service no longer exists.</li>
+<li>mips: Fixed issue with case sensitive playpath. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/306">#306</a>)</li>
+<li>ilive: Added missing app parameter. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/293">#293</a>)</li>
+<li>ustreamtv: Added support for password protected streams via <code class="docutils literal"><span class="pre">--ustream-password</span></code>.</li>
+<li>youtube: Now handles youtu.be shortcuts, patch by Andy Mikhailenko. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/288">#288</a>)</li>
+<li>youtube: Use first available stream found on channel pages, patch by &#8220;unintended&#8221;. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/291">#291</a>)</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>hds: Fixed segmented streams logic, patch by Moritz Blanke.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed buffer overwriting issue when passing a memoryview, patch by Martin Panter. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/295">#295</a>)</li>
+<li>Avoid a ResourceWarning when using <code class="docutils literal"><span class="pre">--player-continuous-http</span></code>, patch by Martin Panter. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/296">#296</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-7-3-2014-01-31">
+<h2>Version 1.7.3 (2014-01-31)<a class="headerlink" href="#version-1-7-3-2014-01-31" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for hitbox.tv, patch by t0mm0. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/248">#248</a>)</li>
+<li>Added plugin for Crunchyroll, patch by Agustín Carrasco. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/262">#262</a>)</li>
+<li>twitch: Added support for hours in ?t=... on VODs.</li>
+<li>twitch: Added support for ?t=... on VOD highlights.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>hls: Now allows retries on failed segment fetch.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>cli: Don&#8217;t pass our proxy settings to the player. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/260">#260</a>)</li>
+<li>hds: Now uses global height as stream name if needed when parsing manifests.</li>
+<li>hls: Always use first stream for each quality in variant playlists. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/256">#256</a>)</li>
+<li>hls: Now returns correct exception on playlist parser errors.</li>
+<li>hls: Now remembers cookies set by variant playlist response. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/258">#258</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-7-2-2013-12-17">
+<h2>Version 1.7.2 (2013-12-17)<a class="headerlink" href="#version-1-7-2-2013-12-17" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>The <code class="docutils literal"><span class="pre">--twitch-legacy-names</span></code> option is now deprecated.</li>
+<li>Added <code class="docutils literal"><span class="pre">--twitch-oauth-authenticate</span></code> and <code class="docutils literal"><span class="pre">--twitch-oauth-token</span></code> options.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>filmon: Added quality weights. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/239">#239</a>)</li>
+<li>filmon_us: Added support for VODs, patch by John Peterson. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/237">#237</a>)</li>
+<li>twitch: Updated for service changes. No more RTMP streams, only HLS.</li>
+<li>twitch: Removed mobile streams since they are the same as the new desktop streams.</li>
+<li>twitch: Removed the legacy names option.</li>
+<li>twitch: Added support for OAuth2 authentication.</li>
+<li>twitch: Added support for the t=00m0s parameter in VOD URLs.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Always wait for the player process to exit, patch by Martin Panter. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/234">#234</a>)</li>
+<li>Fixed potential deadlocking when using named pipe, patch by Martin Panter. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/236">#236</a>)</li>
+<li>Fixed issue with spaces in default player path, patch by John Peterson. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/237">#237</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-7-1-2013-12-07">
+<h2>Version 1.7.1 (2013-12-07)<a class="headerlink" href="#version-1-7-1-2013-12-07" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added FilmOn Social TV plugin by John Peterson. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/225">#225</a>)</li>
+<li>twitch: Support mobile_source quality, patch by Andrew Bashore.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>hds: Will now use video height as stream names if available.</li>
+<li>hds: Removed the use of movie identifier in the fragment URLs.</li>
+<li>hds: Added support for player verification, patch by Martin Panter. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/222">#222</a>)</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed various Python warnings, patch by Martin Panter. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/221">#221</a>)</li>
+<li>cli: Fixed back-slash issue in <code class="docutils literal"><span class="pre">--player-args</span></code>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/218">#218</a>)</li>
+<li>hds: Fixed some streams complaining about the hardcoded hdcore parameter.</li>
+<li>hls: Fixed live streams that keep all previous segments in the playlists. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/224">#224</a>)</li>
+<li>setup.py now forces requests 1.x on Python &lt;2.6.3. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/219">#219</a>)</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-7-0-2013-11-07">
+<h2>Version 1.7.0 (2013-11-07)<a class="headerlink" href="#version-1-7-0-2013-11-07" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added a <code class="docutils literal"><span class="pre">--player-no-close</span></code> option.</li>
+<li>Added options to use HTTP proxies with <code class="docutils literal"><span class="pre">--http-proxy</span></code> and <code class="docutils literal"><span class="pre">--https-proxy</span></code>.</li>
+<li>It&#8217;s now possible to specify multiple streams as a comma-separated
+list. If a stream is not available the next one in the list will be tried.</li>
+<li>Now only resolves synonyms once when using <code class="docutils literal"><span class="pre">--player-continuous-http</span></code>.</li>
+<li>Removed the <code class="docutils literal"><span class="pre">-u</span></code> shortcut for <code class="docutils literal"><span class="pre">--plugins</span></code>. This is a response to someone
+spreading the misinformation that <code class="docutils literal"><span class="pre">-url</span></code> is a sane parameter to use.
+It&#8217;s technically valid, but due to the <code class="docutils literal"><span class="pre">-u</span></code> shortcut it would be
+interpreted by Python&#8217;s argparse as <code class="docutils literal"><span class="pre">--plugins</span> <span class="pre">--rtmpdump</span> <span class="pre">l</span></code> which
+would cause livestreamer to look for a non-existing rtmpdump executable,
+thus disabling any RTMP streams. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/193">#193</a>)</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added Afreeca.tv plugin.</li>
+<li>dailymotion: Fixed incorrect RTMP parameters. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/201">#201</a>)</li>
+<li>filmon: Updated after service changes. Patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/205">#205</a>)</li>
+<li>ilive: Updated after service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/200">#200</a>)</li>
+<li>livestream: Added support for HLS streams.</li>
+<li>livestream: Updated after service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/195">#195</a>)</li>
+<li>mips: Updated after service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/200">#200</a>)</li>
+<li>svtplay: Fixed some broken HDS streams. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/200">#200</a>)</li>
+<li>twitch: Updated to use the new HLS API.</li>
+<li>weeb: Updated after service changes. Patch by Athanasios Oikonomou. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/207">#207</a>)</li>
+<li>youtube: Now handles 3D streams properly. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/202">#202</a>)</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>hds: Added support for global bootstraps.</li>
+<li>hls: Rewrote the playlist parser from scratch to be more solid and correct
+in accordance to the latest M3U8 spec.</li>
+<li>hls: Now supports playlists using EXT-X-BYTERANGE.</li>
+<li>hls: Now supports playlists using multiple EXT-X-KEY tags.</li>
+<li>hls: Now accepts extra requests parameters to be used when doing
+HTTP requests.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed bytes-serialization when using <code class="docutils literal"><span class="pre">--json</span></code>.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-6-1-2013-10-07">
+<h2>Version 1.6.1 (2013-10-07)<a class="headerlink" href="#version-1-6-1-2013-10-07" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>CLI: Fixed broken <code class="docutils literal"><span class="pre">--player-http</span></code> and <code class="docutils literal"><span class="pre">--player-continuous-http</span></code> on Windows.</li>
+<li>CLI: Fixed un-quoted player paths containing backslashes being broken.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-6-0-2013-09-29">
+<h2>Version 1.6.0 (2013-09-29)<a class="headerlink" href="#version-1-6-0-2013-09-29" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>General:</dt>
+<dd><ul class="first last simple">
+<li>All stream names are now forced to lowercase to avoid issues with
+services renaming streams. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/179">#179</a>)</li>
+<li>Updated requests compatibility to 2.0. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/183">#183</a>)</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last">
+<li><p class="first">Added plugin for Hashd.tv by kasper93. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/184">#184</a>)</p>
+</li>
+<li><p class="first">Azubu.tv: Updated after service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/170">#170</a>)</p>
+</li>
+<li><p class="first">ILive.to: Updated after service changes. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/182">#182</a>)</p>
+</li>
+<li><dl class="first docutils">
+<dt>Twitch/Justin.tv: Refactored and split into separate plugins.</dt>
+<dd><ul class="first last simple">
+<li>Added support for archived streams (VOD). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/70">#70</a>)</li>
+<li>Added a option to force legacy stream names (720p, 1080p+, etc).</li>
+<li>Added a option to access password protected streams.</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p class="first">UStream.tv: Refactored plugin and added support for their RTMP API and
+special streaming technology (UHS). (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/144">#144</a>)</p>
+</li>
+</ul>
+</dd>
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added some more player options: <code class="docutils literal"><span class="pre">--player-args</span></code>, <code class="docutils literal"><span class="pre">--player-http</span></code>,
+<code class="docutils literal"><span class="pre">--player-continuous-http</span></code> and <code class="docutils literal"><span class="pre">--player-passthrough</span></code>. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/131">#131</a>)</li>
+<li>Expanded <code class="docutils literal"><span class="pre">--stream-sorting-excludes</span></code> to support more advanced
+filtering. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/159">#159</a>)</li>
+<li>Now notifies the user if a new version of Livestreamer is available.</li>
+<li>Now allows case-insensitive stream name lookup.</li>
+</ul>
+</dd>
+<dt>API:</dt>
+<dd><ul class="first last simple">
+<li>Added a new exception (<code class="docutils literal"><span class="pre">LivestreamerError</span></code>) that all other exceptions
+inherit from.</li>
+<li>The <code class="docutils literal"><span class="pre">sorting_excludes</span></code> parameter in <code class="docutils literal"><span class="pre">Plugin.get_streams</span></code>
+now supports more advanced filtering. (<a class="reference external" href="https://github.com/chrippa/livestreamer/issues/159">#159</a>)</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed HTTPStream with headers breaking <code class="docutils literal"><span class="pre">--json</span></code> on Python 3.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-5-2-2013-08-27">
+<h2>Version 1.5.2 (2013-08-27)<a class="headerlink" href="#version-1-5-2-2013-08-27" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Twitch/Justin.tv: Fix stream names.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-5-1-2013-08-13">
+<h2>Version 1.5.1 (2013-08-13)<a class="headerlink" href="#version-1-5-1-2013-08-13" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for Filmon.</li>
+<li>Twitch/Justin.tv: Safer cookie and SWF URL handling.</li>
+<li>Youtube: Enable VOD support.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fixed potential crash when invalid UTF-8 is passed as arguments
+to subprocesses.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-5-0-2013-07-18">
+<h2>Version 1.5.0 (2013-07-18)<a class="headerlink" href="#version-1-5-0-2013-07-18" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Handle SIGTERM as SIGINT.</li>
+<li>Improved default player (VLC) detection.</li>
+<li>&#8211;stream-priority renamed to &#8211;stream-types and now excludes
+any stream types not specified.</li>
+<li>Added &#8211;stream-sorting-excludes which excludes streams
+from the internal sorting used by best/worst synonyms.</li>
+<li>Now returns exit code 1 on errors.</li>
+</ul>
+</dd>
+<dt>API:</dt>
+<dd><ul class="first last simple">
+<li>plugin.get_streams(): Renamed priority parameter to stream_types
+and changed behaviour slightly.</li>
+<li>plugin.get_streams(): Added the parameter sorting_excludes.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added plugin for Aliez.tv.</li>
+<li>Added plugin for Weeb.tv.</li>
+<li>Added plugin for Veetle.</li>
+<li>Added plugin for Euronews.</li>
+<li>Dailymotion: Updated for JSON result changes.</li>
+<li>Livestream: Added SWF verification.</li>
+<li>Stream: Added httpstream://.</li>
+<li>Stream: Now evaluates parameters as Python values.</li>
+<li>Twitch/Justin.tv: Fixed HLS stream names.</li>
+<li>Youtube Live: Improved stream names.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-4-5-2013-05-11">
+<h2>Version 1.4.5 (2013-05-11)<a class="headerlink" href="#version-1-4-5-2013-05-11" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Twitch/Justin.tv: Fixed mobile transcode request never happening.</li>
+<li>GOMTV.net: Fixed issue causing disabled streams to be picked up.</li>
+<li>Azubu.tv: Updated for HTML change.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>HLS: Fixed potential crash when getting a invalid playlist.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-4-4-2013-05-03">
+<h2>Version 1.4.4 (2013-05-03)<a class="headerlink" href="#version-1-4-4-2013-05-03" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Twitch/Justin.tv: Fixed possible crash on Python 3.</li>
+<li>Ilive.to: HTML parsing fixes by Sam Edwards.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-4-3-2013-05-01">
+<h2>Version 1.4.3 (2013-05-01)<a class="headerlink" href="#version-1-4-3-2013-05-01" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last">
+<li><p class="first">Major refactoring of the code base.</p>
+</li>
+<li><p class="first">Now respects the XDG Base Directory Specification.
+Will attempt to load config and plugins from the following paths:</p>
+<blockquote>
+<div><ul class="simple">
+<li>$XDG_CONFIG_HOME/livestreamer/config</li>
+<li>$XDG_CONFIG_HOME/livestreamer/plugins/</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">The option &#8211;quiet-player is now deprecated since
+it is now the default behaviour. A new option &#8211;verbose-player
+was added to show the player&#8217;s console output.</p>
+</li>
+<li><p class="first">The option &#8211;cmdline now prints arguments in quotes.</p>
+</li>
+<li><p class="first">Print error message if the player fails to start.</p>
+</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last">
+<li><p class="first">Added a cache plugins can use to store data
+that does not need to be generated on every run.</p>
+</li>
+<li><p class="first">Added Azubu.tv plugin.</p>
+</li>
+<li><p class="first">Added owncast.me plugin by Athanasios Oikonomou.</p>
+</li>
+<li><p class="first">Youtube: Updated for HTML changes.</p>
+</li>
+<li><dl class="first docutils">
+<dt>GOMTV.net:</dt>
+<dd><ul class="first last simple">
+<li>Fixed incorrect cookie names</li>
+<li>Stream names are now more consistent</li>
+<li>Added support for Limelight streams</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>Twitch/Justin.tv:</dt>
+<dd><ul class="first last simple">
+<li>Fixed SWF verification issues</li>
+<li>The HLS streams available are now higher quality</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>Minor improvements and fixes to HDS.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Properly fixed named pipe support on Windows.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-4-2-2013-03-01">
+<h2>Version 1.4.2 (2013-03-01)<a class="headerlink" href="#version-1-4-2-2013-03-01" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Attempt to find VLC locations on OS X and Windows.</li>
+<li>Added &#8211;stream-priority parameter.</li>
+<li>Added &#8211;json parameter which makes livestreamer output JSON,
+useful for scripting in other languages.</li>
+<li>Handle player exit cleaner by using SIGPIPE.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>UStream: Now falls back on alternative CDNs when neccessary and added
+support for embed URLs.</li>
+<li>Added ilive.to plugin by Athanasios Oikonomou.</li>
+<li>Added cast3d.tv plugin by Athanasios Oikonomou.</li>
+<li>streamingvideoprovider.co.uk: Added support for RTMP streams.</li>
+<li>GOMTV.net: Major refactoring and also added support Adobe HDS streams.</li>
+<li>SVTPlay: Added support for Adobe HDS streams.</li>
+<li>Twitch/Justin.tv: Some minor tweaks and fixes.</li>
+<li>Ongamenet: Update to URL and HTML changes.</li>
+<li>Livestream.com: Update for HTML changes.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>Minor improvements and fixes to HLS.</li>
+<li>Added support for Adobe HDS streams.</li>
+</ul>
+</dd>
+<dt>General:</dt>
+<dd><ul class="first last simple">
+<li>Removed cache parameter from default player, since they do not work
+on older versions of VLC.</li>
+<li>Added meta-stream &#8220;worst&#8221;.</li>
+<li>Removed sh dependancy and embeded pbs instead.</li>
+</ul>
+</dd>
+<dt>Bug fixes:</dt>
+<dd><ul class="first last simple">
+<li>Fix named pipes on Windows x64.</li>
+</ul>
+</dd>
+<dt>API:</dt>
+<dd><ul class="first last simple">
+<li>Added optional priority argument to Plugin.get_streams.</li>
+<li>Improved docstrings.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-4-1-2012-12-20">
+<h2>Version 1.4.1 (2012-12-20)<a class="headerlink" href="#version-1-4-1-2012-12-20" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added &#8211;ringbuffer-size option.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Fixed problem with UStream plugin and latest RTMPDump.</li>
+<li>Added freedocast.com plugin by Athanasios Oikonomou.</li>
+<li>Added livestation.com plugin by Athanasios Oikonomou.</li>
+<li>Added mips.tv plugin by Athanasios Oikonomou.</li>
+<li>Added streamingvideoprovider.co.uk plugin by Athanasios Oikonomou.</li>
+<li>Added stream plugin that handles URLs such as hls://, rtmp://, etc.</li>
+<li>Added yycast.com plugin by Athanasios Oikonomou.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>Refactored the HLS stream support.</li>
+</ul>
+</dd>
+<dt>General:</dt>
+<dd><ul class="first last simple">
+<li>Bumped requests version requirement to 1.0.</li>
+<li>Bumped sh version requirement to 1.07.</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-1-4-2012-11-23">
+<h2>Version 1.4 (2012-11-23)<a class="headerlink" href="#version-1-4-2012-11-23" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>CLI:</dt>
+<dd><ul class="first last simple">
+<li>Added &#8211;rtmpdump-proxy option.</li>
+<li>Added &#8211;plugin-dirs option.</li>
+<li>Now automatically attempts to use secondary stream CDNs when primary fails.</li>
+</ul>
+</dd>
+<dt>Plugins:</dt>
+<dd><ul class="first last simple">
+<li>Added Dailymotion plugin by Gaspard Jankowiak.</li>
+<li>Added livestream.com plugin.</li>
+<li>Added VOD support to GOMTV plugin.</li>
+<li>Twitch plugin now finds HLS streams.</li>
+<li>own3D.tv plugin now finds more CDNs.</li>
+<li>Fixed bugs in Youtube and GOMTV plugin.</li>
+<li>Refactored UStream plugin.</li>
+</ul>
+</dd>
+<dt>Streams:</dt>
+<dd><ul class="first last simple">
+<li>Added support for AkamaiHD HTTP streams.</li>
+</ul>
+</dd>
+<dt>General:</dt>
+<dd><ul class="first last simple">
+<li>Added unit tests, still fairly small coverage though.</li>
+<li>Added travis-ci integration.</li>
+<li>Now using python-sh on <a href="#id2"><span class="problematic" id="id3">*</span></a>nix since python-pbs is deprecated.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2011-2015, Christopher Rosell.
+    </p>
+  </div>
+
+  <a href="https://github.com/chrippa/sphinx_rtd_theme_violet">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.12.2',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+  <script type="text/javascript" src="_static/js/scrollspy.js"></script>
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+  
+
+
+  
+  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+   
+
+</body>
+</html>
