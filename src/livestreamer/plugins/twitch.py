@@ -18,6 +18,8 @@ try:
 except ImportError:
     pass
 
+CLIENT_ID = "bdrboepik2lcitu2y70aovd0i29yj77"
+
 QUALITY_WEIGHTS = {
     "source": 1080,
     "high": 720,
@@ -163,6 +165,10 @@ class TwitchAPI(object):
         http.parse_cookies(cookies, domain="twitch.tv")
 
     def call(self, path, format="json", schema=None, **extra_params):
+        headers={
+            "Client-ID": CLIENT_ID
+        }
+
         params = dict(as3="t", **extra_params)
 
         if self.oauth_token:
@@ -171,7 +177,7 @@ class TwitchAPI(object):
         url = "https://{0}.twitch.tv{1}.{2}".format(self.subdomain, path, format)
 
         # The certificate used by Twitch cannot be verified on some OpenSSL versions.
-        res = http.get(url, params=params, verify=False)
+        res = http.get(url, headers=headers, params=params, verify=False)
 
         if format == "json":
             return http.json(res, schema=schema)
