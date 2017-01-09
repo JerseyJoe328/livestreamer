@@ -4,20 +4,21 @@ import re
 import types
 from livestreamer.plugin import Plugin
 from livestreamer.plugin.api import http, validate
+from livestreamer.plugin.api.utils import parse_json
 from livestreamer.stream import HTTPStream
 
-ROOM_API = "http://www.panda.tv/api_room?roomid="
-SD_URL_PATTERN = "http://pl{0}.live.panda.tv/live_panda/{1}.flv"
-HD_URL_PATTERN = "http://pl{0}.live.panda.tv/live_panda/{1}_mid.flv"
-# I don't know ordinary-definition url pattern, sorry for ignore it.
-OD_URL_PATTERN = "http://pl{0}.live.panda.tv/live_panda/{1}_mid.flv"
+ROOM_API = "http://www.panda.tv/api_room_v2?roomid="
+SD_URL_PATTERN = "http://pl{0}.live.panda.tv/live_panda/{1}.flv{2}"
+HD_URL_PATTERN = "http://pl{0}.live.panda.tv/live_panda/{1}_mid.flv{2}"
+OD_URL_PATTERN = "http://pl{0}.live.panda.tv/live_panda/{1}_small.flv{2}"
 
 _url_re = re.compile("http(s)?://(\w+.)?panda.tv/(?P<channel>[^/&?]+)")
 
 _room_schema = validate.Schema(
-        {
-            "data": validate.any(
-                validate.text,
+    {
+        "data": validate.any(
+            validate.text,
+            validate.all(
                 dict,
                 {
                     "videoinfo": validate.any(
@@ -25,6 +26,16 @@ _room_schema = validate.Schema(
                         {
                             "room_key": validate.text,
                             "plflag": validate.text,
+                            "plflag_list": validate.all(
+                                validate.transform(parse_json),
+                                {
+                                    validate.optional("auth"): {
+                                        "sign": validate.text,
+                                        "rid": validate.text,
+                                        "time": validate.text
+                                    }
+                                }
+                            ),
                             "status": validate.text,
                             "stream_addr": {
                                 "HD": validate.text,
@@ -35,8 +46,10 @@ _room_schema = validate.Schema(
                     )
                 }
             )
-        },
-        validate.get("data"))
+        )
+    },
+    validate.get("data")
+)
 
 
 class pandatv(Plugin):
@@ -73,15 +86,24 @@ class pandatv(Plugin):
         plflag = plflag.split('_')[1]
         room_key = videoinfo.get('room_key')
 
+        if "auth" in data['videoinfo']["plflag_list"]:
+            auth = "?sign={0}&ts={1}&rid={2}".format(data['videoinfo']["plflag_list"]["auth"]["sign"], data['videoinfo']["plflag_list"]["auth"]["time"], data['videoinfo']["plflag_list"]["auth"]["rid"])
+        else:
+            auth = ""
+
         # SD(Super high Definition) has higher quality than HD(High Definition) which
         # conflict with existing code, use ehq and hq instead.
         stream_addr = videoinfo.get('stream_addr')
     
         if stream_addr and stream_addr.get('SD') == '1':
-            streams['ehq'] = HTTPStream(self.session, SD_URL_PATTERN.format(plflag, room_key))
+            streams['ehq'] = HTTPStream(self.session, SD_URL_PATTERN.format(plflag, room_key, auth))
 
         if stream_addr and stream_addr.get('HD') == '1':
-            streams['hq'] = HTTPStream(self.session, HD_URL_PATTERN.format(plflag, room_key))
+            streams['hq'] = HTTPStream(self.session, HD_URL_PATTERN.format(plflag, room_key, auth))
+
+
+        if stream_addr and stream_addr.get('OD') == '1':
+            streams['sq'] = HTTPStream(self.session, OD_URL_PATTERN.format(plflag, room_key, auth))
 
         return streams
 
