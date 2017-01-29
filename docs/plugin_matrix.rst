@@ -88,7 +88,8 @@ tvcatchup           - tvcatchup.com      Yes   No    Streams may be geo-restrict
 tvplayer            tvplayer.com         Yes   No
 twitch              twitch.tv            Yes   Yes   Possible to authenticate for access to
                                                      subscription streams.
-useetv              useetv.com           Yes   No    Streams may be geo-restricted to Indonesia.
+useetv              useetv.com           Yes   No    Streams may be geo-restricted to Indonesia
+                                                     or subscription only.
 ustreamtv           ustream.tv           Yes   Yes
 vaughnlive          - vaughnlive.tv      Yes   --
                     - breakers.tv

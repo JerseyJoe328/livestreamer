@@ -58,6 +58,8 @@ class UseeTV(Plugin):
                     return HLSStream.parse_variant_playlist(self.session, auth_info["stream_url"])
             elif auth_info["resultCode"] == 303:
                 self.logger.warning("Stream is geo-restricted")
+            elif auth_info["resultCode"] in (302, 306):
+                self.logger.warning("Stream is available only for IndiHome customers")
 
         return
 
