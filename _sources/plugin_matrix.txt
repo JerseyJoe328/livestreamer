@@ -67,6 +67,7 @@ periscope           periscope.tv         Yes   Yes   Replay/VOD is supported.
 picarto             picarto.tv           Yes   --
 piczel              piczel.tv            Yes   --
 rtve                rtve.es              Yes   No
+rtvs                rtvs.sk              Yes   No    Streams may be geo-restricted to Slovakia.
 ruv                 ruv.is               Yes   Yes   Streams may be geo-restricted to Iceland.
 sbsdiscovery        - kanal5play.se      --    Yes
                     - kanal9play.se
